@@ -1,4 +1,4 @@
-# create a file in /tmp.
+# create a file inside a directory
 
 file { '/tmp/school':
   ensure  => file,
