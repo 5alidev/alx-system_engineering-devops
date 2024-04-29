@@ -2,9 +2,11 @@
 # load balancer script installer / config
 
 # istall
+apt-get -y update
+
 apt-get install --no-install-recommends software-properties-common
 add-apt-repository ppa:vbernat/haproxy-2.9
-apt-get install haproxy=2.9.\*
+apt-get -y install haproxy=2.9.\*
 
 # config HAProxy file using a roundrobin algorithm
 echo '
