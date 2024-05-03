@@ -2,7 +2,7 @@
 # script to make Nginx listen on port 80
 
 # Configure Nginx to listen on port 80
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 
 # Restart Nginx service
-service nginx restart
+sudo service nginx restart
