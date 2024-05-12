@@ -1,4 +1,4 @@
-#ALX- 0x11. What happens when you type google.com in your browser and press Enter
+# ALX- 0x11. What happens when you type google.com in your browser and press Enter
 
-##Tasks
-###0. What happens when...
+## Tasks
+### 0. What happens when...
