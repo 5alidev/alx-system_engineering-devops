@@ -1,0 +1,15 @@
+sudo apt-get update
+# install ufw
+sudo apt install ufw
+# set the default UFW incoming policy to deny
+sudo ufw default deny incoming
+# set the default UFW outgoing policy to allow
+sudo ufw default allow outgoing
+# allowing SSH by Service Name
+sudo ufw allow ssh
+# allowing HTTP
+sudo ufw allow 80
+# allowing HTTPS
+sudo ufw allow 443
+# enable the firewall
+sudo ufw enable
