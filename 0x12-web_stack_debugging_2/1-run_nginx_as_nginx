@@ -9,7 +9,7 @@ chown -R nginx:nginx /var/log/nginx
 chown -R nginx:nginx /var/lib/nginx
 
 # Update Nginx server block to listen on port 8080
-sed -i '/^ *listen /c\    listen 8080;' /etc/nginx/sites-available/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 
 # Restart Nginx
 systemctl restart nginx
