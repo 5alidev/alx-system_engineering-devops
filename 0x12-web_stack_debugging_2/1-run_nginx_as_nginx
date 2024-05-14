@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# script that runs nginx as nginx
+
+# Modify the Nginx configuration file to run as nginx user
+sed -i 's/^user .*/user nginx;/' /etc/nginx/nginx.conf
+
+# Change ownership of Nginx directories to nginx user
+chown -R nginx:nginx /var/log/nginx
+chown -R nginx:nginx /var/lib/nginx
+
+# Update Nginx server block to listen on port 8080
+sed -i '/^ *listen /c\    listen 8080;' /etc/nginx/sites-available/default
+
+# Restart Nginx
+systemctl restart nginx
