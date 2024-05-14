@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # script that runs nginx as nginx
 
+chmod 644 /etc/nginx/nginx.conf
 # Modify the Nginx configuration file to run as nginx user
 sed -i 's/^user .*/user nginx;/' /etc/nginx/nginx.conf
 
@@ -12,4 +13,4 @@ chown -R nginx:nginx /var/lib/nginx
 sed -i '/^ *listen /c\    listen 8080;' /etc/nginx/sites-available/default
 
 # Restart Nginx
-sudo -u nginx systemctl restart nginx
+sudo -u nginx service nginx restart
