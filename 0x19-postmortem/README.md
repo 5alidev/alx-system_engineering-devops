@@ -1,5 +1,7 @@
 # 0x19. Postmortem
 
+!["meme image"](https://i.pinimg.com/564x/ac/46/d4/ac46d4eb2d4430e982e5797b7e1ac868.jpg)
+
 - 0. My first postmortem:
 
 # Puppet Manifest Error - WordPress Configuration Change
