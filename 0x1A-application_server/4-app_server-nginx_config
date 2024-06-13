@@ -1,0 +1,26 @@
+server {
+    listen 80;
+    listen [::]:80;
+    add_header X-Served-By $hostname;
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html
+
+    server_name 54.162.97.17;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location /airbnb-onepage/ {
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    }
+
+    location ~ /number_odd_or_even/(\d+)$ {
+        set $number $1;
+        proxy_pass http://127.0.0.1:5001/number_odd_or_even/$number;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:5002/api/;
+    }
+}
